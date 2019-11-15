@@ -1,5 +1,5 @@
 FROM debian:9.9
-MAINTAINER Jordi Gimenez <info@mobilejazz.com>
+MAINTAINER Josue Diaz
 
 ENV REFRESHED_AT 2019-05-31
 ENV SWAN_VER 3.27
@@ -48,7 +48,5 @@ COPY ./rmuser.sh /rmuser.sh
 RUN chmod 755 /run.sh /adduser.sh /lsusers.sh /rmuser.sh
 
 EXPOSE 500/udp 4500/udp
-
-VOLUME ["/lib/modules", "/etc/ppp/chap-secrets", "/etc/ipsec.d/passwd", "/etc/ipsec.secrets"]
 
 CMD ["/run.sh"]
